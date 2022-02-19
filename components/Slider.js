@@ -16,19 +16,19 @@ export default function Slider({ pet }) {
     loop: true,
     mode: 'free-snap',
     slides: {
-      perView: 3,
+      perView: 1,
       spacing: 15,
     },
     breakpoints: {
-      '(max-width: 500px)': {
+      '(min-width: 500px)': {
         slides: {
-          perView: 1,
+          perView: 2,
           spacing: 5,
         },
       },
-      '(max-width: 990px)': {
+      '(min-width: 990px)': {
         slides: {
-          perView: 2,
+          perView: 3,
           spacing: 5,
         },
       },
@@ -36,11 +36,11 @@ export default function Slider({ pet }) {
   })
 
   return (
-    <div ref={sliderRef} className="keen-slider">
+    <div ref={sliderRef} className='keen-slider'>
       {images.map((src, idx) => (
         <div
           key={idx}
-          className="keen-slider__slide"
+          className='keen-slider__slide'
           style={{ opacity: opacities[idx] }}
         >
           <img src={src.formats.small.url} />
