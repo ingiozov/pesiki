@@ -1,16 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gray-bg: #fafafa;
+  --text: #023c5a;
+  --primary: #ff3e7e;
+  --light: #f8f9fa;
+  --teal: #20c997;
+  --danger: #dc3545;
+  --success: #28a745;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
+  line-height: 1.4;
+  color: var(--text);
+  background-color: var(--gray-bg);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: all 0.2s;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  color: var(--primary);
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-weight: 500;
+}
+
+h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  letter-spacing: -2px;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  letter-spacing: -2px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  padding: 13px 32px;
+  color: #fff;
+  font-weight: 500;
+  background: var(--primary);
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.petcard {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.petcard:hover {
+  transform: scale3d(1.01, 1.01, 1.01);
+}
+
+.keen-slider {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 30px 0;
+}
+
+.keen-slider__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keen-slider__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progressbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.progress,
+.progress__seek {
+  height: 6px;
+}
+
+.progress {
+  background-color: var(--light);
+  width: 90%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress__seek {
+  background-color: var(--teal);
 }

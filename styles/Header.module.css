@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 10;
+  height: 80px;
+  padding: 0 25px;
+  box-shadow: 0 10px 15px rgba(109, 87, 87, 0.1);
+}
+
+.header .logo {
+  color: var(--primary);
+  font-family: 'Amatic SC', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header .Navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.header .Navbar ul li {
+  padding: 27px 4px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 11px;
+}
+
+.navbutton {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: var(--text);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.navbutton:hover {
+  color: var(--primary);
+}
+
+.Navbar .MobileNavigation {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .Navbar .Navigation {
+    display: none;
+  }
+
+  .Navbar .MobileNavigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .Navbar .MobileNavigation .Hamburger {
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+  }
+
+  .Navbar nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 0 30px 0;
+    border-top: 2px solid var(--light);
+    z-index: 100;
+  }
+
+  .header .Navbar nav ul li {
+    padding: 8px 4px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .header {
+    padding: 0 50px;
+  }
+}
